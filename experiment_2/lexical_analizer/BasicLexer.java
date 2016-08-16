@@ -1,4 +1,4 @@
-package research_2.lexical_analizer;
+package experiment_2.lexical_analizer;
 
 import java.util.ArrayList;
 import java.util.List;

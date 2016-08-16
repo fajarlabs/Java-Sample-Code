@@ -1,4 +1,4 @@
-package research_1.encode_decode;
+package experiment_1.encode_decode;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Base64;
