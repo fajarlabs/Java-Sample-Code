@@ -1,5 +1,6 @@
 package basic_7.kelas_overload;
 
+/* Sampel tentang overload*/
 public class OverloadConstructor {
 	@SuppressWarnings("unused")
 	private String data_1;
@@ -27,12 +28,14 @@ public class OverloadConstructor {
 		System.out.println("Tanpa Constructor");
 	}
 	
-	// Copy dan paste di class Application didalam methode void main
-	/*
-	 new OverloadConstructor("HelloWorld");
-	 new OverloadConstructor(4);
-	 new OverloadConstructor(false);
-	 new OverloadConstructor();
-	 */
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */	
+	public static void main(String[] args) {
+		 new OverloadConstructor("HelloWorld");
+		 new OverloadConstructor(4);
+		 new OverloadConstructor(false);
+		 new OverloadConstructor();
+	}
 
 }

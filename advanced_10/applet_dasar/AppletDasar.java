@@ -11,34 +11,39 @@ import java.awt.event.MouseListener;
 
 /*
  * Contoh event handling di applet
+ * Jalankan file ini dengan cara,
+ * Klik kanan -> Run As -> Java Applet
  */
 public class AppletDasar extends Applet implements MouseListener,
 		ActionListener {
 	
-	// Inisialisasi komponen
+	/* Inisialisasi komponen */
 	StringBuffer strBuffer;
 	TextArea txtArea;
 	Button b,c;
 
+	/* Init komponen */
 	public void init() {
-		// Tambahkan listener event ini
+		/* Tambahkan listener event ini */
 		addMouseListener(this);
 		strBuffer = new StringBuffer();
 		addItem("initializing the apple ");
 		
-		// Tambah komponen text area
+		/* Tambah komponen text area */
 		txtArea = new TextArea(10, 20);
 		txtArea.setEditable(false);
 		// Masukkan kedalam window
 		add(txtArea, "center");
 		
-		// Tambah button
+		/* Tambah button */
 		b = new Button("Add");
 		c = new Button("Subtract");
-		// Tambahkan event
+		
+		/* Tambahkan event */
 		b.addActionListener(this);
 		c.addActionListener(this);
-		// Masukkan kedalam window
+		
+		/* Masukkan kedalam window */
 		add(b);
 		add(c);
 	}
@@ -62,10 +67,10 @@ public class AppletDasar extends Applet implements MouseListener,
 	}
 
 	public void paint(Graphics g) {
-		// Draw a Rectangle around the applet's display area.
+		/* Draw a Rectangle around the applet's display area. */
 		g.drawRect(0, 0, getWidth() - 1, getHeight() - 1);
 
-		// display the string inside the rectangle.
+		/* display the string inside the rectangle. */
 		g.drawString(strBuffer.toString(), 10, 20);
 	}
 
@@ -87,17 +92,15 @@ public class AppletDasar extends Applet implements MouseListener,
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// Dapatkan komponen melalu event
+		/* Dapatkan komponen melalu event */
 		Button button = (Button)e.getSource();
 		
-		// Filter / Periksa komponen sesuai button event-nya masing2
-		if(b == button) {
+		/* Filter / Periksa komponen sesuai button event-nya masing2 */
+		if(b == button)
 			System.out.println("Button b");
-		}
 		
-		if(c == button) {
+		if(c == button)
 			System.out.println("Button c");
-		}
 
 	}
 }

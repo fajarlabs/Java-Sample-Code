@@ -6,33 +6,36 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileReaderWriter {
-	public void test() {
+	
+	public void lihatHasil() {
 		FileReader in = null;
 		FileWriter out = null;
 
 		try {
-			// Path File Input
-			String pathInput = "./input.txt";	
-			// Path File Output
-			String pathOutput = "./output.txt";
-			// Input File Reader
+			
+			/* Path file input */
+			String pathInput = "input.txt";	
+			
+			/* Path file output */
+			String pathOutput = "output.txt";
+			
+			/* Input file reader */
 			in = new FileReader(new File(pathInput));
-			// Output File Writer
+			
+			/* Output File Writer */
 			out = new FileWriter(pathOutput);
 
 			int c;
-			while ((c = in.read()) != -1) {
+			while ((c = in.read()) != -1)
 				out.write(c);
-			}
+			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			if (in != null) {
 				try {
 					in.close();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -40,10 +43,17 @@ public class FileReaderWriter {
 				try {
 					out.close();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
 		}
+	}
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */
+	public static void main(String[] args) {
+		FileReaderWriter fileReaderWriter = new FileReaderWriter();
+		fileReaderWriter.lihatHasil();
 	}
 }

@@ -20,14 +20,13 @@ public class RunnableDemo implements Runnable {
 	
 	@Override
 	public void run() {
-		// Ini adalah methode dari interface Runnable
+		/* Ini adalah methode dari interface Runnable */
 		for(int i=0; i < 5; i++) {
 			try {
 				System.out.println("Pesan dari thread : "+threadName+" ke "+i);
-				int miliDetik = 1000; // 1 detik
+				int miliDetik = 1000; /* 1 detik */
 				Thread.sleep(miliDetik);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -38,37 +37,37 @@ public class RunnableDemo implements Runnable {
 		RunnableDemo runnableDemo = new RunnableDemo("T1");
 		Thread t1 = new Thread(runnableDemo);
 		t1.start();
-		/*
-		 * Lihat hasilnya jika menggunakan join
-		 * 
-		 */
+		/* Lihat hasil menggunakan join */
 		try {
 			t1.join();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 		t1.setPriority(Thread.NORM_PRIORITY);
-	    //t1.setDaemon(false);
+	    /* t1.setDaemon(false); */
 		
-		// Thread kedua T2
+		/* Thread kedua T2 */
 		RunnableDemo runnableDemo2 = new RunnableDemo("T2");
 		Thread t2 = new Thread(runnableDemo2);
 		t2.start();
-		/*
-		 * Lihat hasilnya jika menggunakan join
-		 */
+		/* Lihat hasil jika menggunakan join */
 		try {
 			t2.join();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 		t2.setPriority(Thread.MAX_PRIORITY);
 	    t2.setDaemon(true);
 		
+	}
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */	
+	public static void main(String[] args) {
+		RunnableDemo.lihatHasil();
 	}
 
 }

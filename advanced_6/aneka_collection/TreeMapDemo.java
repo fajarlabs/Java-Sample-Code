@@ -8,30 +8,44 @@ import java.util.TreeMap;
  * Turunan abstractMap dengan menggunakan tree.
  */
 public class TreeMapDemo {
-	public static void lihatHasil() {
-		// Create a hash map
+	
+	public void lihatHasil() {
+		
+		/* Buat sebuah tree map */
 		TreeMap tm = new TreeMap();
-		// Put elements to the map
-		tm.put("Zara", new Double(3434.34));
-		tm.put("Mahnaz", new Double(123.22));
-		tm.put("Ayan", new Double(1378.00));
-		tm.put("Daisy", new Double(99.22));
-		tm.put("Qadir", new Double(-19.08));
+		
+		/* Put Taruh elemen kedalam tree map */
+		tm.put("Wawan", new Double(3434.34));
+		tm.put("Sindu", new Double(123.22));
+		tm.put("Heri", new Double(1378.00));
+		tm.put("Farid", new Double(99.22));
+		tm.put("Akbar", new Double(-19.08));
 
-		// Get a set of the entries
+		/* Dapatkan set entri */
 		Set set = tm.entrySet();
-		// Get an iterator
+		
+		/* Dapatkan iterator */
 		Iterator i = set.iterator();
-		// Display elements
+		
+		/* Tampilkan elemen */
 		while (i.hasNext()) {
 			Map.Entry me = (Map.Entry) i.next();
 			System.out.print(me.getKey() + ": ");
 			System.out.println(me.getValue());
 		}
 		System.out.println();
-		// Deposit 1000 into Zara's account
-		double balance = ((Double) tm.get("Zara")).doubleValue();
-		tm.put("Zara", new Double(balance + 1000));
-		System.out.println("Zara's new balance: " + tm.get("Zara"));
+		
+		/* Deposit 1000 into Wawan's account */
+		double balance = ((Double) tm.get("Wawan")).doubleValue();
+		tm.put("Wawan", new Double(balance + 1000));
+		System.out.println("Wawan's new balance: " + tm.get("Wawan"));
+	}
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */	
+	public static void main(String[] args) {
+		TreeMapDemo treeMapDemo = new TreeMapDemo();
+		treeMapDemo.lihatHasil();
 	}
 }

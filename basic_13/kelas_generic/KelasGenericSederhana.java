@@ -1,8 +1,9 @@
 package basic_13.kelas_generic;
 
-// Tahap I
-// Membuat Kelas GenericSederhana
-// Perhatikan karakter <T>
+/* Tahap I
+ * Membuat Kelas GenericSederhana
+ * Perhatikan karakter <T>
+ */
 class GenericSederhana<T> {
 	T data;
 
@@ -15,15 +16,15 @@ class GenericSederhana<T> {
 	}
 } 
 
-// Tahap II
-// Cara menggunakan kelas GenericSederhana
+/* Tahap II
+ * Cara menggunakan kelas GenericSederhana */
 public class KelasGenericSederhana {
 	
 	public void cetakHasil() {
-		// Inisialisasi variabel ber-tipe data String beserta isinya
+		/* Inisialisasi variabel ber-tipe data String beserta isinya */
 		String hello = "Halo";
 		
-		// Cara menggunakannya
+		/* Cara menggunakannya */
 		GenericSederhana<String> genericSederhana = new GenericSederhana<>();
 		genericSederhana.setData(hello);
 		System.out.println(genericSederhana.getData());

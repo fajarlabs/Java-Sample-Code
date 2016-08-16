@@ -20,12 +20,20 @@ class GenericDuaParameter<T,U> {
 
 public class KelasGenericDuaParameter {
 	
-	public void cetakHasil() {
+	public void lihatHasil() {
 		GenericDuaParameter<String,Integer> genericDuaParameter = new GenericDuaParameter<>();
 		genericDuaParameter.setData_1("ERROR ");
 		genericDuaParameter.setData_2(404);
 		
 		// Hasilnya cetak "ERROR 404"
 		System.out.println(genericDuaParameter.getData_1()+genericDuaParameter.getData_2());
+	}
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */		
+	public static void main(String[] args) {
+		KelasGenericDuaParameter kelasGenericDuaParameter = new KelasGenericDuaParameter();
+		kelasGenericDuaParameter.lihatHasil();
 	}
 }

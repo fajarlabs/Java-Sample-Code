@@ -8,28 +8,30 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class LoggerDasar {
+	
+	/* Buat logger */
 	private static final Logger LOGGER = Logger.getLogger(LoggerDasar.class.getName());
 	
-	public void cetakHasil() {
+	public void lihatHasil() {
 		Handler consoleHandler = null;
 		Handler fileHandler  = null;
 		try{
-			//Creating consoleHandler and fileHandler
+			/* Creating consoleHandler and fileHandler */
 			consoleHandler = new ConsoleHandler();
-			fileHandler  = new FileHandler("./javacodegeeks.log");
+			fileHandler  = new FileHandler("javacodegeeks.log");
 			
-			//Assigning handlers to LOGGER object
+			/* Assigning handlers to LOGGER object */
 			LOGGER.addHandler(consoleHandler);
 			LOGGER.addHandler(fileHandler);
 			
-			//Setting levels to handlers and LOGGER
+			/* Setting levels to handlers and LOGGER */
 			consoleHandler.setLevel(Level.ALL);
 			fileHandler.setLevel(Level.ALL);
 			LOGGER.setLevel(Level.ALL);
 			
 			LOGGER.config("Configuration done.");
 			
-			//Console handler removed
+			/* Console handler removed */
 			LOGGER.removeHandler(consoleHandler);
 			
 			LOGGER.log(Level.FINE, "Finer logged");
@@ -39,4 +41,13 @@ public class LoggerDasar {
 		
 		LOGGER.finer("Finest example on LOGGER handler completed.");
 	}
+
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */
+	public static void main(String[] args) {
+		LoggerDasar loggerDasar = new LoggerDasar();
+		loggerDasar.lihatHasil();
+	}
+	
 }

@@ -8,12 +8,13 @@ import java.util.ArrayList;
 
 public class ArrayListDemo {
 	
-	public static void lihatHasil() {
-		// create an array list
+	public void lihatHasil() {
+		
+		/* create an array list */
 		ArrayList al = new ArrayList();
-		System.out.println("Initial size of al: " + al.size());
+		System.out.println("Inisial ukuran awal dari al : " + al.size());
 
-		// add elements to the array list
+		/* add elements to the array list */
 		al.add("C");
 		al.add("A");
 		al.add("E");
@@ -21,14 +22,23 @@ public class ArrayListDemo {
 		al.add("D");
 		al.add("F");
 		al.add(1, "A2");
-		System.out.println("Size of al after additions: " + al.size());
+		System.out.println("Ukuran setelah diberi isi: " + al.size());
 
-		// display the array list
-		System.out.println("Contents of al: " + al);
-		// Remove elements from the array list
+		/* display the array list */
+		System.out.println("Tampilkan daftar konten : " + al);
+		
+		/* Remove elements from the array list */
 		al.remove("F");
 		al.remove(2);
-		System.out.println("Size of al after deletions: " + al.size());
-		System.out.println("Contents of al: " + al);
+		System.out.println("Ukuran setelah di tambah lagi : " + al.size());
+		System.out.println("Tampilkan semua konten : " + al);
+	}
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */	
+	public static void main(String[] args) {
+		ArrayListDemo arrayListDemo = new ArrayListDemo();
+		arrayListDemo.lihatHasil();
 	}
 }

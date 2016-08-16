@@ -11,4 +11,12 @@ public class KelasAnak extends KelasInduk {
 	public void hobi() {
 		System.out.println("Hobi Anak : Main Pokemon");
 	}
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */	
+	public static void main(String[] args){
+		KelasAnak kelasAnak = new KelasAnak();
+		kelasAnak.hobi();
+	}
 }

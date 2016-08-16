@@ -7,10 +7,12 @@ import java.util.LinkedHashSet;
  */
 
 public class LinkedHashSetDemo {
-	public static void lihatHasil() {
-		// create a hash set
+	
+	public void lihatHasil() {
+		/* Buat sebuah hash set */
 		LinkedHashSet hs = new LinkedHashSet();
-		// add elements to the hash set
+		
+		/* add elements to the hash set */
 		hs.add("B");
 		hs.add("A");
 		hs.add("D");
@@ -18,5 +20,13 @@ public class LinkedHashSetDemo {
 		hs.add("C");
 		hs.add("F");
 		System.out.println(hs);
+	}
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */	
+	public static void main(String[] args) {
+		LinkedHashSetDemo linkedHashSetDemo = new LinkedHashSetDemo();
+		linkedHashSetDemo.lihatHasil();
 	}
 }

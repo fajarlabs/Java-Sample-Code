@@ -1,7 +1,7 @@
 package basic_13.kelas_generic;
 
-// Tahap I
-// Membuat kelas induk
+/* Tahap I
+ * Membuat kelas induk */
 class KelasInduk {
 	
 	public void sapa() {
@@ -9,17 +9,17 @@ class KelasInduk {
 	}
 }
 
-// Tahap II
-// Membuat kelas turunan
+/* Tahap II
+ * Membuat kelas turunan */
 class TurunanInduk extends KelasInduk {
 	public void sapa() {
 		System.out.println("Halo, saya ini kelas turunan induk");
 	}	
 }
 
-// Tahap III
-// Membuat kelas generic-nya
-// perhatikan <T extends KelasInduk>
+/* Tahap III
+ * Membuat kelas generic-nya
+ * perhatikan <T extends KelasInduk> */
 class GenericTurunan <T extends KelasInduk> {
 	T data;
 
@@ -32,11 +32,11 @@ class GenericTurunan <T extends KelasInduk> {
 	}
 }
 
-// Tahap IV
-// Cara menggunakannya
+/* Tahap IV
+ * Cara menggunakannya */
 public class KelasGenericTurunan {
 	
-	public void cetakHasil(){
+	public void lihatHasil(){
 		TurunanInduk turunanInduk = new TurunanInduk();
 		
 		GenericTurunan<TurunanInduk> genericTurunan = new GenericTurunan<>();
@@ -44,5 +44,13 @@ public class KelasGenericTurunan {
 		
 		TurunanInduk hasil = genericTurunan.getData();
 		hasil.sapa();
+	}
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */		
+	public static void main(String[] args){
+		KelasGenericTurunan kelasGenericTurunan = new KelasGenericTurunan();
+		kelasGenericTurunan.lihatHasil();
 	}
 }

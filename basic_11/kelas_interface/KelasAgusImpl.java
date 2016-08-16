@@ -20,5 +20,14 @@ public class KelasAgusImpl implements IManusia {
 		
 		return null;
 	}
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */	
+	public static void main(String[] args) {
+		KelasAgusImpl kelasAgusImpl = new KelasAgusImpl();
+		kelasAgusImpl.nama();
+		System.out.println(kelasAgusImpl.jenisKelamin('L'));
+	}
 
 }

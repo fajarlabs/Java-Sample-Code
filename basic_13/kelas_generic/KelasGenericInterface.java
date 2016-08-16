@@ -1,13 +1,15 @@
 package basic_13.kelas_generic;
 
-// Tahap I
-// Membuat interface IInduk
+/* Tahap I
+ * Membuat interface IInduk
+ */
 interface IInduk {
 	public void sapa();
 }
 
-// Tahap II
-// Membuat kelas implementasi dari interface IInduk
+/* Tahap II
+ * Membuat kelas implementasi dari interface IInduk
+ */
 class KelasTurunanIInduk implements IInduk {
 
 	@Override
@@ -16,10 +18,11 @@ class KelasTurunanIInduk implements IInduk {
 	}
 }
 
-// Tahap III
-// Contoh kelas generic yang mengharuskan parameter
-// generic harus turunan/implementasi IInduk
-// perhatikan karakter <T extends IInduk>
+/* Tahap III
+ * Contoh kelas generic yang mengharuskan parameter
+ * generic harus turunan/implementasi IInduk
+ * perhatikan karakter <T extends IInduk>
+ */
 class GenericInterface <T extends IInduk> {
 	T data;
 
@@ -32,22 +35,31 @@ class GenericInterface <T extends IInduk> {
 	}	
 }
 
-// Tahap IV
-// Cara menggunakan kelas generic-nya
+/* Tahap IV
+ * Cara menggunakan kelas generic-nya
+ */
 public class KelasGenericInterface {
 	
-	public void cetakHasil() {
-		// Cara menggunakannya
+	public void lihatHasil() {
+		/* Cara menggunakannya */
 		GenericInterface<KelasTurunanIInduk> genericInterface = new GenericInterface<>();
 		
-		// Buat sebuah intansiasi object, dimana ini adalah nilai yang akan dilewatkan
-		// kedalam methode KelasGenericInterface
+		/* Buat sebuah intansiasi object, dimana ini adalah nilai 
+		 yang akan dilewatkan kedalam methode KelasGenericInterface */
 		KelasTurunanIInduk kelasTurunanIInduk = new KelasTurunanIInduk();
 		genericInterface.setData(kelasTurunanIInduk);
 		
-		// Mendapatkan hasilnya
+		/* Mendapatkan hasilnya */
 		@SuppressWarnings("unused")
 		KelasTurunanIInduk hasil = genericInterface.getData();
 		
+	}
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */		
+	public static void main(String[] args) {
+		KelasGenericInterface kelasGenericInterface = new KelasGenericInterface();
+		kelasGenericInterface.lihatHasil();
 	}
 }

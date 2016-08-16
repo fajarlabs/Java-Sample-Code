@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class RegexDasar {
 	
-	public void phoneNumber() {
+	public void lihatHasil() {
 		// Docs http://www.tutorialspoint.com/java/java_regular_expressions.htm
 		
 		String TelkomesiRegExp = "^(\\+62|\\+0|0|62)8(1[123]|52|53|21|22|23)[0-9]{5,9}$";
@@ -19,6 +19,14 @@ public class RegexDasar {
 		Pattern pattern = Pattern.compile(TelkomesiRegExp); // True
 		Matcher matcher = pattern.matcher("+62852347130300");
 		System.out.println("Input String matches regex - "+matcher.matches());
+	}
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */
+	public static void main(String[] args) {
+		RegexDasar regexDasar = new RegexDasar();
+		regexDasar.lihatHasil();
 	}
 
 }

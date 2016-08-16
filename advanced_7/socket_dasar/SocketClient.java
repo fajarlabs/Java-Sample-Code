@@ -9,17 +9,18 @@ import java.net.Socket;
 
 public class SocketClient {
 	
-	public static void salamDariClient() {
+	public void lihatHasil() {
 		
-		// Nama host-nya
+		/* Setting nama host-nya */
 		String serverName = "127.0.0.1";
-		// Port-nya
+		
+		/* Setting Port-nya */
 		int port = 8081;
 		
 		try {
 			System.out.println("Terhubung ke " + serverName + " di port "+ port);
 			
-			// Instansiasi kelas Socket
+			/* Instansiasi kelas Socket */
 			Socket client = new Socket(serverName, port);
 			
 			System.out.println("Baru saja terhubung ke "+ client.getRemoteSocketAddress());
@@ -32,11 +33,19 @@ public class SocketClient {
 			DataInputStream in = new DataInputStream(inFromServer);
 			System.out.println("Server mengatakan " + in.readUTF());
 			
-			// Tutup socket
+			/* Tutup socket */
 			client.close();
 			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */	
+	public static void main(String[] args) {
+		SocketClient socketClient = new SocketClient();
+		socketClient.lihatHasil();
 	}
 }

@@ -7,9 +7,9 @@ public class QuickSort {
  
     public void sort(int[] inputArr) {
          
-        if (inputArr == null || inputArr.length == 0) {
+        if (inputArr == null || inputArr.length == 0)
             return;
-        }
+        
         this.array = inputArr;
         length = inputArr.length;
         quickSort(0, length - 1);
@@ -55,7 +55,7 @@ public class QuickSort {
         array[j] = temp;
     }
      
-    public static void lihatHasil(){
+    public void lihatHasil(){
          
         QuickSort sorter = new QuickSort();
         int[] input = {24,2,45,20,56,75,2,56,99,53,12};
@@ -64,5 +64,13 @@ public class QuickSort {
             System.out.print(i);
             System.out.print(" ");
         }
+    }
+    
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */    
+    public static void main(String[] args) {
+    	QuickSort quickSort = new QuickSort();
+    	quickSort.lihatHasil();
     }
 }

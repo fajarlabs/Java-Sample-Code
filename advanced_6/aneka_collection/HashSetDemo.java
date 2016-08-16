@@ -7,10 +7,13 @@ import java.util.HashSet;
  */
 
 public class HashSetDemo {
-	public static void lihatHasil() {
-		// create a hash set
+	
+	public void lihatHasil() {
+		
+		/* Buat sebuah hash set */
 		HashSet hs = new HashSet();
-		// add elements to the hash set
+		
+		/* Tambahkan elemen kedalam hash set */
 		hs.add("B");
 		hs.add("A");
 		hs.add("D");
@@ -18,5 +21,13 @@ public class HashSetDemo {
 		hs.add("C");
 		hs.add("F");
 		System.out.println(hs);
+	}
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */
+	public static void main(String[] args) {
+		HashSetDemo hashSetDemo = new HashSetDemo();
+		hashSetDemo.lihatHasil();
 	}
 }

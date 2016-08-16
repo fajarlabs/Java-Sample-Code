@@ -9,6 +9,11 @@ public class MainLewatCmd {
 	// run CMD
 	// > java -jar test.jar nilai1 nilai2 nilai3
 	
+	/* Jalankan file ini dengan cara di export terlebih dahulu seperti berikut,
+	 * Klik kanan -> Export -> Java -> Runnable Jar
+	 * lalu buka dengan command prompt, lalu masukkan perintah dibawah ini
+	 * > java -jar test.jar nilai1 nilai2 nilai3
+	 */		
 	public static void main(String[] args) {
 
 		String argument_1 = null, argument_2 = null, argument_3 = null;

@@ -7,18 +7,24 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
 
-// Socket server menggunakan thread dengan menggunakan turunan Thread bukan 
-// menggunakan interface runnable
+/* Socket server menggunakan thread dengan menggunakan turunan 
+ * Thread bukan menggunakan interface runnable 
+ */
 
 public class SocketServer extends Thread {
 	private ServerSocket serverSocket;
+	private int port;
 
 	public SocketServer(int port) throws IOException {
+		/* Port */
+		this.port = port;
 		
-		// Port socket server
+		/* Setting port socket-nya */
 		serverSocket = new ServerSocket(port);
-		// Batas timeout
-		serverSocket.setSoTimeout(10000);
+		
+		/* Setting batas timeout-nya */
+		int miliDetik = 10000;
+		serverSocket.setSoTimeout(miliDetik);
 	}
 
 	public void run() {
@@ -49,13 +55,25 @@ public class SocketServer extends Thread {
 		}
 	}
 
-	public static void lihatHasil() {
-		// Port Server
-		int port = 8081;
-		
+	public void lihatHasil() {		
 		try {
 			Thread t = new SocketServer(port);
 			t.start();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */		
+	public static void main(String[] args) {
+		/* Setting port */
+		int port = 8081;
+		
+		try {
+			SocketServer socketServer = new SocketServer(port);
+			socketServer.lihatHasil();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

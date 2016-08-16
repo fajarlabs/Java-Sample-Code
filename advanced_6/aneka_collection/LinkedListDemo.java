@@ -7,10 +7,13 @@ import java.util.LinkedList;
  */
 
 public class LinkedListDemo {
-	public static void lihatHasil() {
-		// create a linked list
+	
+	public void lihatHasil() {
+		
+		/* Buat sebuah linkedlist */
 		LinkedList ll = new LinkedList();
-		// add elements to the linked list
+		
+		/* Tambahkan elemen kedalam linkedlist */
 		ll.add("F");
 		ll.add("B");
 		ll.add("D");
@@ -19,21 +22,29 @@ public class LinkedListDemo {
 		ll.addLast("Z");
 		ll.addFirst("A");
 		ll.add(1, "A2");
-		System.out.println("Original contents of ll: " + ll);
+		System.out.println("Elemen aslinya : " + ll);
 
-		// remove elements from the linked list
+		/* Hapus sebagian elemennya */
 		ll.remove("F");
 		ll.remove(2);
-		System.out.println("Contents of ll after deletion: " + ll);
+		System.out.println("Konten setelah ada penghapusan : " + ll);
 
-		// remove first and last elements
+		/* Hapus elemen yang ada di posisi pertama dan terakhir */
 		ll.removeFirst();
 		ll.removeLast();
-		System.out.println("ll after deleting first and last: " + ll);
+		System.out.println("ll setelah penghapusan : " + ll);
 
-		// get and set a value
+		/* get and set a value */
 		Object val = ll.get(2);
-		ll.set(2, (String) val + " Changed");
-		System.out.println("ll after change: " + ll);
+		ll.set(2, (String) val + " Berubah");
+		System.out.println("ll setelah perubahan : " + ll);
+	}
+
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */
+	public static void main(String[] args) {
+		LinkedListDemo linkedListDemo = new LinkedListDemo();
+		linkedListDemo.lihatHasil();
 	}
 }

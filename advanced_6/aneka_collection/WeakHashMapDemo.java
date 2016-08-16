@@ -10,11 +10,11 @@ public class WeakHashMapDemo {
 
 	public static void lihatHasil() {
 		map = new WeakHashMap();
-		map.put(new String("Maine"), "Augusta");
+		map.put(new String("Wawan"), "Sindu");
 
 		Runnable runner = new Runnable() {
 			public void run() {
-				while (map.containsKey("Maine")) {
+				while (map.containsKey("Wawan")) {
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException ignored) {
@@ -30,6 +30,15 @@ public class WeakHashMapDemo {
 		try {
 			t.join();
 		} catch (InterruptedException ignored) {
+			ignored.printStackTrace();
 		}
+	}
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */	
+	public static void main(String[] args) {
+		WeakHashMapDemo weakHashMapDemo = new WeakHashMapDemo();
+		weakHashMapDemo.lihatHasil();
 	}
 }

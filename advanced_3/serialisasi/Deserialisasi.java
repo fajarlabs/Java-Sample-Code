@@ -9,6 +9,7 @@ public class Deserialisasi {
 	public static void lihatHasil() {
 		Employee e = null;
 		try {
+			/* Load file-nya */
 			FileInputStream fileIn = new FileInputStream("employee.ser");
 			ObjectInputStream in = new ObjectInputStream(fileIn);
 			e = (Employee) in.readObject();
@@ -27,5 +28,13 @@ public class Deserialisasi {
 		System.out.println("Address: " + e.address);
 		System.out.println("SSN: " + e.SSN);
 		System.out.println("Number: " + e.number);
+	}
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */
+	public static void main(String[] args) {
+		Deserialisasi deserialisasi = new Deserialisasi();
+		deserialisasi.lihatHasil();
 	}
 }

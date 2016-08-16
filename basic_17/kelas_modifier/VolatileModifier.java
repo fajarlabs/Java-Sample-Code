@@ -42,7 +42,8 @@ class VolatileThread extends Thread {
 }
 
 public class VolatileModifier {
-	public void cetakHasil() {
+	
+	public void lihatHasil() {
 		VolatileData volatileData = new VolatileData();
 		Thread thread1 = new Thread(new VolatileThread(volatileData));
 		Thread thread2 = new Thread(new VolatileThread(volatileData));
@@ -65,12 +66,20 @@ public class VolatileModifier {
 		 	
 		 	http://stackoverflow.com/questions/106591/do-you-ever-use-the-volatile-keyword-in-java
 		 	
-			[Thread 13]: 1 value = 0   // Thread 3 berisi 0
-			[Thread 11]: 1 value = 0   // Waiting dan sama berisi 0
-			[Thread 13]: 2 value = 1   // Waiting dan +1
-			[Thread 11]: 2 value = 2   // Waiting dan +1
-			[Thread 13]: 3 value = 3   // dan seterusnya...
+			[Thread 13]: 1 value = 0   -> Thread 3 berisi 0
+			[Thread 11]: 1 value = 0   -> Waiting dan sama berisi 0
+			[Thread 13]: 2 value = 1   -> Waiting dan +1
+			[Thread 11]: 2 value = 2   -> Waiting dan +1
+			[Thread 13]: 3 value = 3   -> dan seterusnya...
 			[Thread 11]: 3 value = 4
 		*/
+	}
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */	
+	public static void main(String[] args) {
+		VolatileModifier volatileModifier = new VolatileModifier();
+		volatileModifier.lihatHasil();
 	}
 }

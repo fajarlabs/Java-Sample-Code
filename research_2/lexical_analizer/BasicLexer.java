@@ -11,7 +11,8 @@ import java.util.List;
  */
 
 public class BasicLexer {
-	// Keyword program
+	
+	/* Keyword program */
 	public static final String[] keywords = { "abstract", "continue", "for",
 			"new", "switch", "assert", "default", "goto", "package",
 			"synchronized", "boolean", "do", "if", "private", "this", "break",
@@ -53,7 +54,7 @@ public class BasicLexer {
 		public final Type t;
 		public final String c; // Kontent utama token
 
-		// kolom token
+		/* kolom token */
 		public Token(Type t, String c) {
 			this.t = t;
 			this.c = c;
@@ -175,7 +176,7 @@ public class BasicLexer {
 			}
 
 			if (flagDouble == 2) {
-				flagDouble = 0; // reset flag untuk double quotes
+				flagDouble = 0; /* reset flag untuk double quotes */
 				System.out.println(tokens.get(indexToken - 1));
 			}
 

@@ -5,9 +5,10 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 
 public class Serialisasi {
-	public static void lihatHasil() {
+	
+	public void lihatHasil() {
 		Employee e = new Employee();
-		e.name = "Andi Kurniawan";
+		e.name = "Fajarlabs";
 		e.address = "Depok, Jawa Barat";
 		e.SSN = 23445443;
 		e.number = 313;
@@ -18,9 +19,17 @@ public class Serialisasi {
 			out.writeObject(e);
 			out.close();
 			fileOut.close();
-			System.out.printf("Serialized data is saved in /tmp/employee.ser");
+			System.out.printf("Data serialisasi ini disimpan di /tmp/employee.ser");
 		} catch (IOException i) {
 			i.printStackTrace();
 		}
+	}
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */
+	public static void main(String[] args) {
+		Serialisasi serialisasi = new Serialisasi();
+		serialisasi.lihatHasil();
 	}
 }

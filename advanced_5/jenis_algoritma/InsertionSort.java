@@ -2,7 +2,7 @@ package advanced_5.jenis_algoritma;
 
 public class InsertionSort {
 	 
-    public static void lihatHasil(){
+    public void lihatHasil(){
         int[] arr1 = {10,34,2,56,7,67,88,42};
         int[] arr2 = doInsertionSort(arr1);
         for(int i:arr2){
@@ -11,7 +11,7 @@ public class InsertionSort {
         }
     }
      
-    public static int[] doInsertionSort(int[] input){
+    public int[] doInsertionSort(int[] input){
          
         int temp;
         for (int i = 1; i < input.length; i++) {
@@ -24,5 +24,13 @@ public class InsertionSort {
             }
         }
         return input;
+    }
+  
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */
+    public static void main(String[] args) {
+    	InsertionSort insertionSort = new InsertionSort();
+    	insertionSort.lihatHasil();
     }
 }

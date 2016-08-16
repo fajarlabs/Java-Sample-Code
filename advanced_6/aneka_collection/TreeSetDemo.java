@@ -5,10 +5,12 @@ import java.util.TreeSet;
  * Mengimplementasikan 1 set disimpan kedalam tree / pohon. Ini turunan AbstractSet
  */
 public class TreeSetDemo {
-	public static void lihatHasil() {
-		// Create a tree set
+	public void lihatHasil() {
+		
+		/* Buat sebuah tree set */
 		TreeSet ts = new TreeSet();
-		// Add elements to the tree set
+		
+		/* Tambahkan elemen kedalam tree set */
 		ts.add("C");
 		ts.add("A");
 		ts.add("B");
@@ -16,5 +18,13 @@ public class TreeSetDemo {
 		ts.add("F");
 		ts.add("D");
 		System.out.println(ts);
+	}
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */	
+	public static void main(String[] args) {
+		TreeSetDemo treeSetDemo = new TreeSetDemo();
+		treeSetDemo.lihatHasil();
 	}
 }

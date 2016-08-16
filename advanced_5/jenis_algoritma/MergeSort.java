@@ -6,7 +6,7 @@ public class MergeSort {
     private int[] tempMergArr;
     private int length;
  
-    public static void lihatHasil(){
+    public void lihatHasil(){
          
         int[] inputArr = {45,23,11,89,77,98,4,28,65,43};
         MergeSort mms = new MergeSort();
@@ -60,6 +60,13 @@ public class MergeSort {
             k++;
             i++;
         }
- 
+    }
+    
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */    
+    public static void main(String[] args) {
+    	MergeSort mergeSort = new MergeSort();
+    	mergeSort.lihatHasil();
     }
 }

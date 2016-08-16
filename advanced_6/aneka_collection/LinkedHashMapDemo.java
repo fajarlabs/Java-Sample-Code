@@ -8,30 +8,36 @@ import java.util.Set;
  * Turunan HashMap dengan memungkinkan insertion-order iterations.
  */
 public class LinkedHashMapDemo {
+	
 	public static void lihatHasil() {
-		// Create a hash map
+		
+		/* Buat sebuah hash map */
 		LinkedHashMap lhm = new LinkedHashMap();
-		// Put elements to the map
-		lhm.put("Zara", new Double(3434.34));
-		lhm.put("Mahnaz", new Double(123.22));
-		lhm.put("Ayan", new Double(1378.00));
-		lhm.put("Daisy", new Double(99.22));
-		lhm.put("Qadir", new Double(-19.08));
+		
+		/* Taruh elemen-elemen kedalam map */
+		lhm.put("Wawan", new Double(3434.34));
+		lhm.put("Sindu", new Double(123.22));
+		lhm.put("Heri", new Double(1378.00));
+		lhm.put("Farid", new Double(99.22));
+		lhm.put("Akbar", new Double(-19.08));
 
-		// Get a set of the entries
+		/* Dapatkan set entri */
 		Set set = lhm.entrySet();
-		// Get an iterator
+		
+		/* Dapatkan iterator-nya */
 		Iterator i = set.iterator();
-		// Display elements
+		
+		/* Tampilkan elemen-nya */
 		while (i.hasNext()) {
 			Map.Entry me = (Map.Entry) i.next();
 			System.out.print(me.getKey() + ": ");
 			System.out.println(me.getValue());
 		}
 		System.out.println();
-		// Deposit 1000 into Zara's account
-		double balance = ((Double) lhm.get("Zara")).doubleValue();
-		lhm.put("Zara", new Double(balance + 1000));
-		System.out.println("Zara's new balance: " + lhm.get("Zara"));
+		
+		// Deposit 1000 into Wawan's account
+		double balance = ((Double) lhm.get("Wawan")).doubleValue();
+		lhm.put("Wawan", new Double(balance + 1000));
+		System.out.println("Wawan's new balance: " + lhm.get("Wawan"));
 	}
 }

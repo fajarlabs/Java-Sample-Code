@@ -2,13 +2,14 @@ package basic_9.kelas_eskapsulasi;
 
 public class kelas_encapsulation {
 	
-	/**
-	 * Methode contoh implementasi enskapsulasi
-	 */
-	public void contoh() {
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */	
+	public static void main(String[] args) {
 		
-		// Cara ke 1
-		// Tanpa inisialisasi nilai untuk contructor
+		/* Cara ke 1
+		 * Tanpa inisialisasi nilai untuk contructor
+		 */
 		Motor motor = new Motor();
 		motor.setMerek("Suzuki");
 		motor.setCc(1300);
@@ -17,8 +18,9 @@ public class kelas_encapsulation {
 		System.out.println(motor.getCc());
 		System.out.println(motor.getModel());
 		
-		// Cara ke 2
-		// Dengan inisialisasi constructor
+		/* Cara ke 2
+		 * Dengan inisialisasi constructor
+		 */
 		Motor motor2 = new Motor("Yamaha",500,"Sport");
 		System.out.println(motor2.getMerek());
 		System.out.println(motor2.getCc());

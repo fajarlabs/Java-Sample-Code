@@ -16,47 +16,55 @@ import javax.mail.internet.MimeMessage;
 
 public class KirimEmail {
 	
-	public static void lihatHasil() {
-		// Recipient's email ID needs to be mentioned.
-		String to = "abcd@gmail.com";
+	public void lihatHasil() {
+		/* Email penerima */
+		String to = "admin@gmail.com";
 
-		// Sender's email ID needs to be mentioned
-		String from = "web@gmail.com";
+		/* Si pengirim email */
+		String from = "fajarrdp@gmail.com";
 
-		// Assuming you are sending email from localhost
+		/* Asumsinya mengirim email dari localhost */
 		String host = "localhost";
 
-		// Get system properties
+		/* Get system properties */
 		Properties properties = System.getProperties();
 
-		// Setup mail server
+		/* Setup mail server */
 		properties.setProperty("mail.smtp.host", host);
 
-		// Get the default Session object.
+		/* Dapatkan session object */
 		Session session = Session.getDefaultInstance(properties);
 
 		try {
-			// Create a default MimeMessage object.
+			/* Buat default mimeMessage object */
 			MimeMessage message = new MimeMessage(session);
 
-			// Set From: header field of the header.
+			/* Header pengirim */
 			message.setFrom(new InternetAddress(from));
 
-			// Set To: header field of the header.
-			message.addRecipient(Message.RecipientType.TO, new InternetAddress(
-					to));
+			/* Tambahkan penerima */
+			message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
-			// Set Subject: header field
-			message.setSubject("This is the Subject Line!");
+			/* Tambahkan judul pesan */
+			message.setSubject("Judul pesan!");
 
-			// Now set the actual message
+			/* Sekarang buat pesan email-nya */
 			message.setText("This is actual message");
 
-			// Send message
+			/* Kirim email */
 			Transport.send(message);
-			System.out.println("Sent message successfully....");
+			System.out.println("Pesan berhasil terkirim....");
+			
 		} catch (MessagingException mex) {
 			mex.printStackTrace();
 		}
+	}
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */		
+	public static void main(String[] args) {
+		KirimEmail kirimEmail = new KirimEmail();
+		kirimEmail.lihatHasil();
 	}
 }

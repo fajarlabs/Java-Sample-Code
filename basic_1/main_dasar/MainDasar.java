@@ -8,6 +8,10 @@ public class MainDasar {
 	 * Metode main mirip seperti ke main fungsi di C dan C++. ini adalah entry point aplikasimu
 	 * dan akan memanggil semua metode yang terdapat di programmu.
 	 */
+	
+	/* Jalankan file ini dengan cara,
+	 * Klik kanan -> Run As -> Java Application
+	 */	
 	public static void main(String[] args) {
 		System.out.println("Halo Dunia");
 	}
