@@ -7,9 +7,8 @@ public class VolatileExample {
 	public void lihatHasil() {
 		Thread printVolatileVar = new Thread() {
 			public void run() {
-				/* dicopy hanya sekali saja saat running untuk pengecekan
-				 * selanjutnya, ada di dalam while jika tidak sama maka akan
-				 * dilakukan peng-copyan ulang lagi */
+				/* menuju ke memori utama, dengan thread masing2 */
+				/* penjelasannya ada di http://tutorials.jenkov.com/java-concurrency/volatile.html */
 				int x = VOLATILE_VAR;
 				while(true) {
 					/* Disini berulang dan periksa VOLATILE_VAR */
