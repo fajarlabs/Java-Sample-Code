@@ -44,7 +44,7 @@ class Thread_2 extends Thread {
 	}
 }
 
-class Uji_sinkronisasi {
+class SynchronizeMethodExample {
 	
 	/* Jalankan file ini dengan cara,
 	 * Klik kanan -> Run As -> Java Application
